@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Dev tools
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::view( 'test/welcome' , 'pages.index');
