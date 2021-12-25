@@ -31,5 +31,5 @@ use App\Http\Controllers\ProductController;
 
 
 route::resource('posts',PostController::class);
-route::resource('Users',UserController::class);
+route::resource('users',UserController::class);
 route::resource('products',ProductController::class);

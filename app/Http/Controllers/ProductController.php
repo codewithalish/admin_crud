@@ -13,7 +13,6 @@ class ProductController extends Controller
     {
         $query = Product::get();
 
-
         return view('products.index', ['products' => $query]);
     }
 
@@ -48,7 +47,7 @@ class ProductController extends Controller
     {
         $data=$request->only(['title','body','color','size','price']);
         Product::where('id',$id)->update($data);
-        return redirect('products')->with('success'.'محصول با موفقیت ویرایش شد');
+        return redirect('products')->with('success','محصول با موفقیت ویرایش شد');
     }
 
     public function destroy($id)
@@ -56,7 +55,7 @@ class ProductController extends Controller
         Product::query()
             ->where('id', $id)->delete();
 
-        return back()->with('success'.'محصول با موفقیت حذف شد');
+        return back()->with('success','محصول با موفقیت حذف شد');
     }
 
 

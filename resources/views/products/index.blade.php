@@ -86,17 +86,17 @@
                                         @method('DELETE')
                                         @csrf
 
-                                        <button class="btn btn-danger btn-circle btn-lg">
+                                        <button class="btn btn-danger btn-circle btn-lg" title="حذف">
                                             <i class="fas fa-trash"></i>
                                         </button>
 
                                     </form>
 
-                                    <a style="" href="/products/{{$item->id}}/edit" class="btn btn-info btn-circle btn-lg">
+                                    <a style="" href="/products/{{$item->id}}/edit" title="ویرایش" class="btn btn-info btn-circle btn-lg">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
 
-                                    <a href="/products/{{$item->id}}" class="btn btn-success btn-circle btn-lg">
+                                    <a href="/products/{{$item->id}}"  title="نمایش"class="btn btn-success btn-circle btn-lg">
                                         <i class="fas fa-check"></i>
                                     </a>
 
