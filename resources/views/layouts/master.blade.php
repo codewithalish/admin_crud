@@ -54,7 +54,7 @@
     <!-- Core plugin JavaScript-->
     <script src="/sb_admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
+    <!-- Custom scripts for all products-->
     <script src="/sb_admin/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
