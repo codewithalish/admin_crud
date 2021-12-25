@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-
+//Route::get('/', function () {
+//    return view('products/edit');
+//});
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +29,7 @@ Route::get('/', function () {
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::view( 'test/welcome' , 'pages.index');
+route::resource('posts',PostController::class);
+route::resource('Users',UserController::class);
+route::resource('products',ProductController::class);
