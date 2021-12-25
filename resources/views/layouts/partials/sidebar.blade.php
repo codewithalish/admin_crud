@@ -26,19 +26,19 @@
 
 
 
-    @foreach(\App\Models\Menu::get() as $item)
+    @foreach($menu_options as $item)
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#{{$item->slug.$item->id}}"
                aria-expanded="true" aria-controls="{{$item->slug.$item->id}}">
-                <i class="fas fa-fw fa-cog"></i>
+                <i class="{{$item->icon}}"></i>
                 <span>{{$item->title}}</span>
             </a>
             <div id="{{$item->slug.$item->id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
 
                     <a class="collapse-item" href="/{{$item->slug}}">لیست</a>
-                    <a class="collapse-item" href="/{{$item->slug}}/create">ایجاد</a>
+                      <a class="collapse-item" href="/{{$item->slug}}/create">ایجاد</a>
                 </div>
             </div>
         </li>
