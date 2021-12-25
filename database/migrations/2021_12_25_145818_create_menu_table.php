@@ -17,7 +17,9 @@ class CreateMenuTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->string('icon')->nullable();
+            $table->string('icon')->nullable(
+
+            );
             $table->timestamps();
         });
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -12,14 +13,14 @@ class UserController extends Controller
     {
         //
         $query = User::limit(10)->OrderBy('id', 'Desc')->get();
-        return view('users.index', ['users' => $query]);
+        return view('users.index', ['users' => $query ]);
 
     }
 
     public function create()
     {
         //
-        return view('users.create');
+        return view('users.create'  );
     }
 
     public function store(Request $request)

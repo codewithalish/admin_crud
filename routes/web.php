@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\MenuController;
 
 
 /*
@@ -33,3 +34,4 @@ use App\Http\Controllers\ProductController;
 route::resource('posts',PostController::class);
 route::resource('users',UserController::class);
 route::resource('products',ProductController::class);
+route::resource('menu',MenuController::class);

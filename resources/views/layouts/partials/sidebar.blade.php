@@ -21,38 +21,29 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-           aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>محصولات</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
 
-                <a class="collapse-item" href="/products">لیست</a>
-                <a class="collapse-item" href="/products/create">ایجاد</a>
+
+
+
+
+    @foreach(\App\Models\Menu::get() as $item)
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#{{$item->slug.$item->id}}"
+               aria-expanded="true" aria-controls="{{$item->slug.$item->id}}">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>{{$item->title}}</span>
+            </a>
+            <div id="{{$item->slug.$item->id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+
+                    <a class="collapse-item" href="/{{$item->slug}}">لیست</a>
+                    <a class="collapse-item" href="/{{$item->slug}}/create">ایجاد</a>
+                </div>
             </div>
-        </div>
-    </li>
+        </li>
 
-
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo2"
-           aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>کاربران</span>
-        </a>
-        <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-
-                <a class="collapse-item" href="/users">لیست</a>
-                <a class="collapse-item" href="/users/create">ایجاد</a>
-            </div>
-        </div>
-    </li>
-
-
+    @endforeach
 
 </ul>
 
