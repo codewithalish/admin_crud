@@ -31,6 +31,11 @@ use App\Http\Controllers\MenuController;
 */
 
 
+route::get('/',function (){
+    return redirect('menu');
+});
+
+
 route::resource('posts',PostController::class);
 route::resource('users',UserController::class);
 route::resource('products',ProductController::class);
